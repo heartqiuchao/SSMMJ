@@ -1,0 +1,131 @@
+.zs-sliders-canvas{
+	position: relative;
+	padding: 0 20px 30px 20px;
+	overflow: hidden;
+	font: 12px/1.25 '寰蒋闆呴粦', Helvetica, sans-serif;
+	background-color: #f7f7f7;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.zs-sliders-axis {
+	position: relative;
+	height: 80px;
+	border-bottom: 1px solid #616161;
+}
+
+div.zs-sliders-range {
+	position: absolute;
+	bottom: 0;
+	height: 25px;
+	background-color: #e2e2e2;
+}
+
+div.zs-sliders-range-value {
+	position: relative;
+	bottom: 1.3em;
+	height: 1.25em;
+	text-align: center;
+	font-size: 10px;
+	overflow: hidden;
+	-webkit-text-size-adjust: none;
+	cursor: pointer;
+}
+
+div.zs-sliders-range.active {
+	background-color: #cde995;
+}
+
+.zs-sliders-axis-tick {
+	position: absolute;
+	bottom: -5px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	height: 4px;
+	border-right: 1px solid #616161;
+}
+
+.zs-sliders-axis-tock {
+	bottom: -11px;
+	height: 10px;
+}
+
+.zs-sliders-axis-subtock {
+	bottom: -8px;
+	height: 7px;
+}
+
+.zs-sliders-axis-label {
+	display: inline-block;
+	position: absolute;
+	bottom: -25px;
+	width: 33px;
+	text-align: center;
+	font-size: 10px;
+	-webkit-text-size-adjust: none;
+}
+
+a.zs-sliders-handle {
+	display: inline-block;
+	position: absolute;
+	bottom: 2px;
+	width: 11px;
+	height: 17px;
+	margin-left: -5px;
+	cursor: e-resize;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+
+	background: url(handles.gif) no-repeat left top;
+
+	z-index: 0;
+}
+
+a.zs-sliders-handle:hover {
+	background-position: -11px top;
+	z-index: 2;
+}
+
+a.zs-sliders-handle.selected {
+	background-position: -22px top;
+}
+
+a.zs-sliders-handle.new, a.zs-sliders-handle.active {
+	background-position: -11px top;
+	z-index: 2;
+}
+
+.zs-sliders-axis-settingPanel {
+	display: none;
+	position: absolute;
+	width: 240px;
+	height: 45px;
+	background-color: #f7f7f7;
+	bottom: 25px;
+	z-index: 10;
+}
+
+.zs-sliders-axis-setting div {
+	margin-top: 5px;
+}
+
+.zs-sliders-axis-setting-label {
+	color: #c6c6c6;
+}
+
+.zs-sliders-axis-setting-value {
+	padding: 3px 2px;
+	width: 54px;
+	border: 1px solid #71b300;
+	background-color: #f8ffef;
+	cursor: text;
+	*vertical-align: middle;
+	outline: 0;
+}

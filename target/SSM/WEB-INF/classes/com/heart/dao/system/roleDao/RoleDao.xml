@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heart.dao.system.roleDao.RoleDao">
+
+    <select id="loadRoleById" resultType="com.heart.dto.system.role.RoleDto">
+        select r.roleid,r.rolename,r.roledesc from role_t as r where r.roleid = #{roleid}
+    </select>
+
+    <select id="loadRoleList" resultType="com.heart.dto.system.role.RoleDto">
+        select r.roleid,r.rolename,r.roledesc from role_t as r
+    </select>
+
+    <insert id="addRole" parameterType="com.heart.dto.system.role.RoleDto">
+        insert into role_t(rolename,roledesc) values(#{rolename},#{roledesc})
+    </insert>
+
+    <insert id="addRoleFunction" parameterType="com.heart.dto.system.role.RoleFunctionDto">
+        insert into role_function_t(roleid,functoinid) values(#{roleid},#{functoinid})
+    </insert>
+
+    <delete id="deleteRoleById">
+        delete from role_t as r where r.roleid = #{roleid}
+    </delete>
+
+    <delete id="deleteRoleFunctionById">
+        delete from role_function_t as r where r.roleid = #{roleid}
+    </delete>
+
+    <update id="updateRoleById" parameterType="com.heart.dto.system.role.RoleDto">
+        update role_t set rolename = #{rolename},roledesc = #{roledesc} where roleid = {roleid}
+    </update>
+
+</mapper>
