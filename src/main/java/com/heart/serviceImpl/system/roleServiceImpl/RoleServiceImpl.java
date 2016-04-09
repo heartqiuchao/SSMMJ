@@ -65,14 +65,24 @@ public class RoleServiceImpl implements RoleService{
     }
 
     private void saveRoleFunction(RoleDto roleDto) throws Exception{
-        if (null != roleDto.getFunctionList() && roleDto.getFunctionList().size()>0){
+        if (null != roleDto.getFidList() && roleDto.getFidList().size()>0){
             RoleFunctionDto roleFunctionDto = new RoleFunctionDto();
             roleFunctionDto.setRoleid(roleDto.getRoleid());
-            for (FunctionDto functionDto :roleDto.getFunctionList()){
-                roleFunctionDto.setFunctionid(functionDto.getFunctionid());
+            for (Integer functionid :roleDto.getFidList()){
+                roleFunctionDto.setFunctionid(functionid);
                 roleDao.addRoleFunction(roleFunctionDto);
             }
         }
+    }
+
+    @Override
+    public boolean hasUserInRole(int id) throws Exception {
+        return roleDao.hasUserInRole(id)>0 ? true:false;
+    }
+
+    @Override
+    public boolean hasSameRoleName(int id, String rolename) throws Exception {
+        return roleDao.hasSameRoleName(id,rolename)>0 ? true:false;
     }
 
     private void removeRoleFunction(int id) throws Exception{

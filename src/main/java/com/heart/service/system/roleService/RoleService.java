@@ -35,4 +35,14 @@ public interface RoleService {
      */
     void updateRole(RoleDto roleDto) throws Exception;
 
+    /**
+     * 判断该角色下是否存在用户
+     */
+    boolean hasUserInRole(int id) throws Exception;
+
+    /**
+     * 判断是否已存在角色名
+     */
+    boolean hasSameRoleName(int id, String rolename) throws Exception;
+
 }

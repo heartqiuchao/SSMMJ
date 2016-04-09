@@ -21,6 +21,8 @@ public class RoleDto implements Serializable {
 
     private List<FunctionDto> functionList;
 
+    private List<Integer> fidList;
+
     public Integer getRoleid() {
         return roleid;
     }
@@ -59,5 +61,13 @@ public class RoleDto implements Serializable {
 
     public void setFunctionList(List<FunctionDto> functionList) {
         this.functionList = functionList;
+    }
+
+    public List<Integer> getFidList() {
+        return fidList;
+    }
+
+    public void setFidList(List<Integer> fidList) {
+        this.fidList = fidList;
     }
 }

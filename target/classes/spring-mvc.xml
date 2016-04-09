@@ -49,8 +49,6 @@
             <mvc:exclude-mapping path="/"/>
             <mvc:exclude-mapping path="/login"/>
             <mvc:exclude-mapping path="/autoout"/>
-            <mvc:exclude-mapping path="/*.ajax"/>
-            <mvc:exclude-mapping path="/*.json"/>
             <bean class="com.heart.util.filter.SecurityInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>

@@ -42,7 +42,7 @@
         <div class="row">
 		    	<section class="panel">
 					<header class="panel-heading">
-		                	查询结果  <font id="qt" color="red"></font>
+		                	用户列表  <font id="qt" color="red"></font>
 		            </header>
 			        <div class="panel-body">
 			        	<div class="adv-table">

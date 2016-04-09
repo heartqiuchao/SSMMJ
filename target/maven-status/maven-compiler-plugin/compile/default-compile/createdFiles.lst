@@ -6,6 +6,7 @@ com\heart\dto\system\user\UserProfileDto.class
 com\heart\controller\system\userController\UserController.class
 com\heart\util\filter\SecurityInterceptor.class
 com\heart\dto\system\function\FunctionDto.class
+com\heart\controller\system\roleController\RoleController.class
 com\heart\dto\system\function\FunctionGroupDto.class
 com\heart\dto\system\role\RoleDto.class
 com\heart\dao\system\roleDao\RoleDao.class

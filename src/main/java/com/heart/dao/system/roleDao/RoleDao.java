@@ -46,4 +46,14 @@ public interface RoleDao {
      * 更新角色
      */
     void updateRole(RoleDto roleDto) throws Exception;
+
+    /**
+     * 判断该角色下是否有用户存在
+     */
+    int hasUserInRole(@Param("roleid") int roleid) throws Exception;
+
+    /**
+     * 判断是否是否角色名已存在
+     */
+    int hasSameRoleName(@Param("roleid") int roleid,@Param("rolename") String rolename) throws Exception;
 }
