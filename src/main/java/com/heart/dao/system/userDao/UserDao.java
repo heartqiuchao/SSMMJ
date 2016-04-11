@@ -12,7 +12,12 @@ import java.util.List;
 @Repository("userDao")
 public interface UserDao {
     /**
-     * 加载用户
+     * 根据ID加载用户
+     */
+    UserDto loadUserById(@Param("userid") int userid) throws Exception;
+
+    /**
+     * 根据账号加载用户
      */
     UserDto loadUserByAccount(@Param("account") String account) throws Exception;
 
@@ -29,7 +34,7 @@ public interface UserDao {
     /**
      * 删除用户
      */
-    void deleteUserByAccount(@Param("account") String account) throws Exception;
+    void deleteUserById(@Param("userid") int userid) throws Exception;
 
     /**
      * 更新用户

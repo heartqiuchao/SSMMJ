@@ -66,13 +66,38 @@
 	                                    <tbody class="tableHover" id="paramlist">
 	                                    	<c:forEach var="fgroup" items="${fGroupList}" varStatus="status">
 		                                    	<tr>
-		                                    		<td><i class="fa fa-${status.index}"></i> ${fgroup.groupname }</td>
+		                                    		<td>
+		                                                <c:choose>
+                             			                    <c:when test="${fgroup.groupname=='System Management'}">
+                             			                        <i class="fa fa-dashboard"></i>
+                             			                    </c:when>
+                             			                    <c:when test="${fgroup.groupname=='Application Management'}">
+                             			                        <i class="fa fa-qrcode"></i>
+                             			                    </c:when>
+                             			                    <c:otherwise>
+                             			                        <i class="fa fa-heart"></i>
+                             			                    </c:otherwise>
+                             			                </c:choose>
+		                                          		 <span>${fgroup.groupname}</span>
+		                                    		</td>
 		                                    		<td>
 		                                    			<c:forEach var="function" items="${functionList}" varStatus="status">
 		                                    				<c:if test="${function.groupid == fgroup.groupid}">
 		                                    					<input  name="fidList"
 		                                    					<c:if test="${status.index ==0 }">dataType="Group" msg="请至少选择一个"</c:if>
-		                                    					type="checkbox" value="${function.functionid}">${function.functionname}
+		                                    					type="checkbox" value="${function.functionid}">
+		                                                        <c:choose>
+                                                         	        <c:when test="${function.functionname=='User Management'}">
+                                                                        <i class="fa fa-user"></i>
+                                                         			</c:when>
+                                                         			<c:when test="${function.functionname=='Role Management'}">
+                                                         			    <i class="fa fa-puzzle-piece"></i>
+                                                         			</c:when>
+                                                         			<c:otherwise>
+                                                         			    <i class="fa fa-glass"></i>
+                                                         			</c:otherwise>
+                                                         	    </c:choose>
+		                                    					<span>${function.functionname}</span>
 		                                    				</c:if>
 		                                    			</c:forEach>
 		                                    		</td>

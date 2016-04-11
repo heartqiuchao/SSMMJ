@@ -66,13 +66,16 @@
 	                                    <tbody class="tableHover" id="paramlist">
 	                                    	<c:forEach var="fgroup" items="${fGroupList}" varStatus="status">
 		                                    	<tr>
-		                                    		<td><i class="fa fa-${status.index}"></i> ${fgroup.groupname }</td>
+		                                    		<td>
+		                                          		 <i class="${fgroup.icon}"></i><span>${fgroup.groupname}</span>
+		                                    		</td>
 		                                    		<td>
 		                                    			<c:forEach var="function" items="${functionList}" varStatus="status">
 		                                    				<c:if test="${function.groupid == fgroup.groupid}">
 		                                    					<input  name="fidList"
 		                                    					<c:if test="${status.index ==0 }">dataType="Group" msg="请至少选择一个"</c:if>
-		                                    					type="checkbox" value="${function.functionid}">${function.functionname}
+		                                    					type="checkbox" value="${function.functionid}">
+		                                    					<i class="${function.icon}"></i><span>${function.functionname}</span>
 		                                    				</c:if>
 		                                    			</c:forEach>
 		                                    		</td>

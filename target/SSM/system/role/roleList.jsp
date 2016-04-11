@@ -22,7 +22,7 @@
 					<header class="panel-heading">
 		                	角色列表  <font id="qt" color="red"></font>
 		                	<span class="tools pull-right">
-		                	    <button type="button" class="btn btn-primary" onclick="javascript:gotoURL('<c:url value='/system/role/add?roleid='/>${rolelist[0].roleid+1}')"><i class="fa fa-plus"></i>&nbsp;新增</button>
+		                	    <button type="button" class="btn btn-primary" onclick="javascript:gotoURL('<c:url value='/system/role/add?roleid='/>${rolelist[0].roleid+1}')"><i class="fa fa-plus"></i> 新增角色</button>
 		                	</span>
 		            </header>
 			        <div class="panel-body">
@@ -46,10 +46,10 @@
 							                    	<td>${role.rolename}</td>
 											        <td>${role.roledesc}</td>
                                                     <td class="alignCenter">
-     											        <c:if test="${role.roleid !=100 }">
-     												        <button type="button" class="btn btn-warning" onclick="javascript:gotoURL('<c:url value='/system/role/edit?roleid='/>${role.roleid}')"><i class="fa fa-pencil"></i>修改</button>
-     												        <button type="button" class="btn btn-danger" onclick="javascript:confirmURL('<c:url value='/system/role/delete?roleid='/>${role.roleid}')"><i class="fa fa-times"></i>删除</button>
-     											        </c:if>
+     											    <c:if test="${role.roleid !=100 }">
+     												    <button type="button" class="btn btn-warning" onclick="javascript:gotoURL('<c:url value='/system/role/edit?roleid='/>${role.roleid}')"><i class="fa fa-pencil"></i>修改</button>
+     												    <button type="button" class="btn btn-danger" onclick="javascript:confirmURL('<c:url value='/system/role/delete?roleid='/>${role.roleid}')"><i class="fa fa-times"></i>删除</button>
+     											    </c:if>
      											     </td>
 							                    </tr>
 							                  </c:forEach>

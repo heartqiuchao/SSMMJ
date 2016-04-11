@@ -43,6 +43,9 @@
 		    	<section class="panel">
 					<header class="panel-heading">
 		                	用户列表  <font id="qt" color="red"></font>
+	                        <span class="tools pull-right">
+    		                    <button type="button" class="btn btn-primary" onclick="javascript:gotoURL('<c:url value='/system/user/add'/>')"><i class="fa fa-plus"></i> 新增用户</button>
+    		                </span>
 		            </header>
 			        <div class="panel-body">
 			        	<div class="adv-table">
@@ -56,6 +59,7 @@
 										        <th>密码</th>
 										        <th>年龄</th>
 										        <th>角色编号</th>
+										        <th>操作</th>
 							                </tr>
 							            </thead>
 							            <tbody class="tableHover">
@@ -67,6 +71,12 @@
 											        <td>${user.password}</td>
 											        <td>${user.age}</td>
 											        <td>${user.roleid}</td>
+											        <td class="alignCenter">
+											        <c:if test="${user.roleid !=100 }">
+                                                        <button type="button" class="btn btn-warning" onclick="javascript:gotoURL('<c:url value='/system/user/edit?userid='/>${user.userid}')"><i class="fa fa-pencil"></i>修改</button>
+     												    <button type="button" class="btn btn-danger" onclick="javascript:confirmURL('<c:url value='/system/user/delete?userid='/>${user.userid}')"><i class="fa fa-times"></i>删除</button>
+											        </c:if>
+											        </td>
 							                    </tr>
 							                  </c:forEach>
 							            </tbody>

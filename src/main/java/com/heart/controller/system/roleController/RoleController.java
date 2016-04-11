@@ -62,6 +62,7 @@ public class RoleController {
                 mv.setViewName("/success");
             }
         }catch (Exception e){
+            mv.addObject("message", "添加角色异常");
             mv.setViewName("/fail");
         }
         return mv;

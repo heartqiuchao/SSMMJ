@@ -12,7 +12,7 @@
     </select>
 
     <insert id="addRole" parameterType="com.heart.dto.system.role.RoleDto">
-        insert into role_t(rolename,roledesc) values(#{rolename},#{roledesc})
+        insert into role_t(roleid,rolename,roledesc) values(#{roleid},#{rolename},#{roledesc})
     </insert>
 
     <insert id="addRoleFunction" parameterType="com.heart.dto.system.role.RoleFunctionDto">

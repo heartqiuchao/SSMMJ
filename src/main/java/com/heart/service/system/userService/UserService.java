@@ -10,7 +10,12 @@ import java.util.List;
 public interface UserService {
 
     /**
-     * 加载用户
+     * 根据ID加载用户
+     */
+    UserDto loadUserById(int id) throws Exception;
+
+    /**
+     * 根据账号加载用户
      */
     UserDto loadUserByAccount(String account) throws Exception;
 
@@ -27,7 +32,7 @@ public interface UserService {
     /**
      * 删除用户
      */
-    void deleteUserByAccount(String account) throws Exception;
+    void deleteUserById(int id) throws Exception;
 
     /**
      * 更新用户

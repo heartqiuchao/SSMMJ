@@ -17,6 +17,8 @@ public class FunctionDto implements Serializable{
 
     private String functiondesc;
 
+    private String icon;
+
     public Integer getFunctionid() {
         return functionid;
     }
@@ -55,5 +57,13 @@ public class FunctionDto implements Serializable{
 
     public void setFunctiondesc(String functiondesc) {
         this.functiondesc = functiondesc;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }

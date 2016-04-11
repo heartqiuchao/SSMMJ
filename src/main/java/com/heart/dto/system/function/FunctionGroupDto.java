@@ -13,6 +13,8 @@ public class FunctionGroupDto implements Serializable{
 
     private String groupdesc;
 
+    private String icon;
+
     public Integer getGroupid() {
         return groupid;
     }
@@ -35,5 +37,13 @@ public class FunctionGroupDto implements Serializable{
 
     public void setGroupdesc(String groupdesc) {
         this.groupdesc = groupdesc;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }

@@ -26,7 +26,7 @@
 	}
 
 	function confirmURL(url){
-		if(confirm("确定吗?")){
+		if(confirm("请确认操作?")){
 			window.location.href = url;
 		}
 	}

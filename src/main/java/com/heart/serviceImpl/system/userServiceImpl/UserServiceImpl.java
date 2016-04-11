@@ -18,6 +18,11 @@ public class UserServiceImpl implements UserService{
     UserDao userDao;
 
     @Override
+    public UserDto loadUserById(int id) throws Exception {
+        return userDao.loadUserById(id);
+    }
+
+    @Override
     public UserDto loadUserByAccount(String account) throws Exception {
         return userDao.loadUserByAccount(account);
     }
@@ -33,8 +38,8 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void deleteUserByAccount(String account) throws Exception {
-        userDao.deleteUserByAccount(account);
+    public void deleteUserById(int id) throws Exception {
+        userDao.deleteUserById(id);
     }
 
     @Override
