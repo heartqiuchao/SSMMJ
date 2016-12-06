@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS `user_t`;
 
-CREATE TABLE `user_t` (
+CREATE TABLE `member_t` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(40) NOT NULL,
   `password` varchar(255) NOT NULL,
